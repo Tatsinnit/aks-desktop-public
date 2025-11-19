@@ -5,6 +5,11 @@ AKS desktop delivers an application focused experience for deploying and managin
 Built on top of open-source Headlamp, AKS desktop provides a guided, self-service UX built on supported AKS features and best practices. Designed to work within your existing environment and tools, it enables team collaboration through RBAC while abstracting complexity without removing control. Visit the official AKS desktop documentation to learn more.
 
 
+## Installation
+
+Please download the latest release for your platform from the [Releases](https://github.com/Azure/aks-desktop/releases/latest) page.
+
+
 ## Getting Started
 
 To get started with AKS desktop, follow these steps:
