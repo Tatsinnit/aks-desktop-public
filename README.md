@@ -2,7 +2,7 @@
 
 AKS desktop delivers an application focused experience for deploying and managing workloads on Azure Kubernetes Service.
 
-Built on top of open-source Headlamp, AKS desktop provides a guided, self-service UX built on supported AKS features and best practices. Designed to work within your existing environment and tools, it enables team collaboration through RBAC while abstracting complexity without removing control. Visit the official AKS desktop documentation to learn more.
+Built on top of open-source [Headlamp](https://headlamp.dev), AKS desktop provides a guided, self-service UX built on supported AKS features and best practices. Designed to work within your existing environment and tools, it enables team collaboration through RBAC while abstracting complexity without removing control. Visit the official AKS desktop documentation to learn more.
 
 
 ## Installation
