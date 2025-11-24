@@ -257,6 +257,31 @@ extends:
                 displayName: "Debug: Post-Signing"
                 condition: succeeded()
 
+              # Create tarball of signed artifacts
+              - bash: |
+                  set -e
+                  echo "=== CREATING TARBALL ==="
+                  cd "$(Pipeline.Workspace)/aks-desktop-deb-unsigned"
+
+                  # Get the version from the .deb filename if available
+                  DEB_FILE=$(find . -name "aks-desktop*.deb" -type f -print -quit)
+                  if [ -n "$DEB_FILE" ]; then
+                    TARBALL_NAME="aks-desktop-signed-$(date +%Y%m%d-%H%M%S).tar.gz"
+                  else
+                    TARBALL_NAME="aks-desktop-signed.tar.gz"
+                  fi
+
+                  echo "Creating tarball: $TARBALL_NAME"
+                  tar -czf "$TARBALL_NAME" *.deb
+
+                  echo "Tarball created successfully"
+                  echo "Tarball size: $(ls -lh "$TARBALL_NAME" | awk '{print $5}')"
+                  echo "Tarball contents:"
+                  tar -tzf "$TARBALL_NAME"
+                  echo "=== TARBALL CREATION COMPLETE ==="
+                displayName: "Create tarball of signed artifacts"
+                condition: succeeded()
+
               # TODO: Remove debug logging after pipeline is stable
               - bash: |
                   echo "=== ARTIFACT PUBLISHING DEBUG ==="
