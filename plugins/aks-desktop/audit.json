@@ -1,0 +1,54 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "storybook": {
+      "name": "storybook",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1111543,
+          "name": "storybook",
+          "dependency": "storybook",
+          "title": "Storybook manager bundle may expose environment variables during build",
+          "url": "https://github.com/advisories/GHSA-8452-54wp-rmv6",
+          "severity": "high",
+          "cwe": [
+            "CWE-200",
+            "CWE-538",
+            "CWE-541"
+          ],
+          "cvss": {
+            "score": 7.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+          },
+          "range": ">=8.0.0 <8.6.15"
+        }
+      ],
+      "effects": [],
+      "range": "8.0.0 - 8.6.14",
+      "nodes": [
+        "node_modules/storybook"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 1,
+      "critical": 0,
+      "total": 1
+    },
+    "dependencies": {
+      "prod": 258,
+      "dev": 1314,
+      "optional": 84,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1581
+    }
+  }
+}
